@@ -5,7 +5,7 @@ RSpec.describe "forcast endpoint GET /api/v1/forecast?location=city,state_abv" d
     describe "get_forecast(city, state)", :vcr do
       let!(:query) { "?city=Denver&state=CO" }
 
-      it "returns the forecast for the given city and state" do
+      xit "returns the forecast for the given city and state" do
         get "/api/v1/forecast#{query}"
 
         json = JSON.parse(response.body, symbolize_names: true)
