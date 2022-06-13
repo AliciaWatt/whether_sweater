@@ -30,7 +30,7 @@ RSpec.describe "book search GET /api/v1/book-search?location=xx&quantity=x" do
       expect(attributes[:forecast]).to have_key(:summary)
       expect(attributes[:forecast][:summary]).to be_a(String)
       expect(attributes[:forecast]).to have_key(:temperature)
-      expect(attributes[:forecast][:temperature]).to be_a(String)
+      expect(attributes[:forecast][:temperature]).to be_a(Float)
       expect(attributes).to have_key(:total_books_found)
       expect(attributes[:total_books_found]).to be_a(Integer)
       expect(attributes).to have_key(:books)

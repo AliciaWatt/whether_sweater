@@ -1,4 +1,4 @@
-class CurrentWeather < Weather
+class CurrentWeather
   attr_reader :datetime,
     :sunrise,
     :sunset,
@@ -6,18 +6,22 @@ class CurrentWeather < Weather
     :feels_like,
     :humidity,
     :uvi,
-    :visibility
+    :visibility,
+    :conditions,
+    :icon
 
   def initialize(data)
-    @datetime = format_datetime(data[:datetime])
-    @sunrise = format_datetime(data[:sunrise])
-    @sunset = format_datetime(data[:sunset])
-    @temperature = "#{data[:temperature]} F"
-    @feels_like = "#{data[:feels_like]} F"
-    @humidity = data[:humidity]
-    @uvi = data[:uvi]
-    @visibility = data[:visibility]
-    @conditions = data[:conditions]
-    @icon = data[:icon]
+    @datetime = Time.at(data[:dt]).to_s
+    @sunrise = Time.at(data[:sunrise]).to_s
+    @sunset = Time.at(data[:sunset]).to_s
+    @temperature = (data[:temperature]).to_f
+    @feels_like = (data[:feels_like]).to_f
+    @humidity = (data[:humidity]).to_f
+    @uvi = (data[:uvi]).to_f
+    @visibility = (data[:visibility]).to_f
+    @conditions = data[:weather][0][:description]
+    # @conditions = data[:conditions]
+    @icon = data[:weather][0][:icon]
+    # @icon = data[:icon]
   end
 end
