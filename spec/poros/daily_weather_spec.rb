@@ -20,8 +20,8 @@ RSpec.describe "DailyWeather object" do
     expect(daily_weather.date).to eq("2022-06-12")
     expect(daily_weather.sunrise).to eq("2022-06-12 22:41:53 -06:00")
     expect(daily_weather.sunset).to eq("2022-06-12 21:49:05 -06:00")
-    expect(daily_weather.max_temp).to eq(85.6)
-    expect(daily_weather.min_temp).to eq(45.6)
+    expect(daily_weather.max_temp).to eq("85.6 F")
+    expect(daily_weather.min_temp).to eq("45.6 F")
     expect(daily_weather.conditions).to eq("overcast clouds")
     expect(daily_weather.icon).to eq("04d")
   end
