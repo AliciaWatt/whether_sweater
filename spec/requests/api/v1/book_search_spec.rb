@@ -48,4 +48,17 @@ RSpec.describe "book search GET /api/v1/book-search?location=xx&quantity=x" do
       expect(book[:publisher]).to be_a(Array)
     end
   end
+  context "bad_query" do
+    let!(:location) { "" }
+    let!(:quantity) { 5 }
+
+    it "returns error", :vcr do
+      get "/api/v1/book-search?location=#{location}&quantity=#{quantity}"
+
+      expect(response.status).to eq(400)
+      json = JSON.parse(response.body, symbolize_names: true)
+
+      expect(json).to be_a(Hash)
+    end
+  end
 end
