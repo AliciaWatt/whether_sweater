@@ -7,11 +7,11 @@ RSpec.describe "MapQuest Geocode service" do
       let!(:response) { MapQuestService.get_geocode(address) }
       let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 
-      it "returns a successful https status code" do
+      it "returns a successful https status code", :vcr do
         expect(response.status).to eq(200)
       end
 
-      it "returns expected json format" do
+      it "returns expected json format", :vcr do
         expect(json).to be_a(Hash)
         expect(json.keys).to eq([:info, :options, :results])
         expect(json[:results]).to be_a(Array)

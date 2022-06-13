@@ -8,7 +8,7 @@ RSpec.describe "open weather map service" do
       let!(:response) { OpenWeatherService.get_forecast(lat, lon) }
       let!(:json) { JSON.parse(response.body, symbolize_names: true) }
 
-      it "returns a successful https status" do
+      it "returns a successful https status", :vcr do
         expect(response.status).to eq(200)
       end
       it "returns the critical data in the data hash" do
