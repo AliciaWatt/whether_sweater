@@ -12,6 +12,18 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def login
-    json = JSON.parse(request.body.string, symbolize_names: true)
+    json = request_json
+    user = User.find_by(email: json[:email])
+    if user && user.authenticate(json[:password])
+      json_response(UsersSerializer.new(user), :ok)
+    else
+      json_response({data: {message: "Invalid credentials"}}, :unauthorized)
+    end
+  end
+
+  private
+
+  def request_json
+    JSON.parse(request.body.string, symbolize_names: true)
   end
 end
