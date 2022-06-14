@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "MapQuest Geocode service" do
+RSpec.describe "MapQuest service" do
   describe "GET /geocode" do
     context "successful query" do
       let!(:address) { "2044 N Ogden, Denver CO" }

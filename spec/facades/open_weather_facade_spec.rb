@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Open Weather Map Facade" do
+RSpec.describe "Open Weather Facade" do
   context "successful query" do
     describe "get_forecast" do
       let!(:lat) { 39.738453 }
