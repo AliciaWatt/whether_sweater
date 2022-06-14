@@ -1,6 +1,6 @@
 # Whether, Sweater? | A Turing 2201 BE Mod 3 Project
 
-##Background & Description
+## Background & Description
 "Whether Sweater" is an individual project that focusses on consuming and creating API endpoints. It combines freely-available weather, location, image, and travel-directions data to serve up information about the weather at queried destinations.
 
 ## Features
