@@ -105,6 +105,7 @@ $ rails s
 
 #### Retrieve Background Image for the City: `GET /api/v1/backgrounds?location=denver,co`
 #### Example Response:
+
 ```
 {
     "data": {
@@ -133,6 +134,7 @@ $ rails s
 ```
 
 #### Example Response:
+
 ```
 {
     "data": {
