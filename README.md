@@ -1,4 +1,4 @@
-# Whether Sweater: A Turing 2201 BE Mod 3 Project
+# Whether, Sweater? | A Turing 2201 BE Mod 3 Project
 
 ##Background & Description
 "Whether Sweater" is an individual project that focusses on consuming and creating API endpoints. It combines freely-available weather, location, image, and travel-directions data to serve up information about the weather at queried destinations.
@@ -10,7 +10,7 @@
 
 ## Requirements and Setup (for Mac):
 ### Ruby and Rails
-- Ruby -V 2.7.2
+- Ruby -V 2.7.4
 - Rails -V 5.2.6
 ### Gems Utilized
 #### Development/Testing Environments
@@ -27,7 +27,6 @@
 - faker
 - factory_bot
 #### Production Environment
-- bootstrap
 - faraday
 - pexels
 - jsonapi-serializer
@@ -35,7 +34,7 @@
 ### Setup
 1. Fork and/or Clone this Repo from GitHub.
 2. In your terminal use `$ git clone <ssh or https path>`
-3. Change into the cloned directory using `$ cd sweater_weather`
+3. Change into the cloned directory using `$ cd whether_sweater`
 4. Install the gem packages using `$ bundle install`
 5. Sign up for an Open Weather Map API key: [Open Weather Map](https://openweathermap.org/api)
 6. Sign up for a Mapquest API key: [MapQuest](https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register)
@@ -103,8 +102,8 @@ $ rails s
                 } {etc ...}
 ```
 
-#### Retrieve Background Image for the City: `GET /api/v1/backgrounds?location=denver,co`
-#### Example Response:
+### Retrieve Background Image for the City: `GET /api/v1/backgrounds?location=denver,co`
+### Example Response:
 
 
 {
@@ -123,6 +122,7 @@ $ rails s
     }
 }
 ```
+
 
 #### User Registration: `POST /api/v1/users`
 ```
