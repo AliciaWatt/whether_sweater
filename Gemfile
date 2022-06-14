@@ -43,7 +43,7 @@ group :development, :test do
   gem "simplecov"
 
   # gem "webmock"
-  # gem "faker"
+  gem "faker"
   gem "rspec_junit_formatter"
   gem "standardrb"
 end
@@ -56,9 +56,9 @@ group :development do
 end
 
 group :test do
+  gem "capybara"
   gem "webmock"
   gem "vcr"
-  gem "faker"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
