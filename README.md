@@ -122,7 +122,7 @@ $ rails s
         }
     }
 }
-
+```
 
 #### User Registration: `POST /api/v1/users`
 ```
