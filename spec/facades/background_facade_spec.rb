@@ -1,12 +1,12 @@
 require "rails_helper"
 
-RSpec.describe "Pexels Facade" do
+RSpec.describe "Background Facade" do
   context "good request" do
     describe "search", :vcr do
       let!(:query) { "Denver" }
-      let!(:image) { PexelsFacade.search(query) }
+      let!(:image) { BackgroundFacade.search(query) }
 
-      it "returns a hash with lat and lng keys and coordinates", :vcr do
+      it "returns an image object", :vcr do
         expect(image).to be_a(Image)
       end
     end

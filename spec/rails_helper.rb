@@ -1,3 +1,6 @@
+require "simplecov"
+SimpleCov.start
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require "spec_helper"
 
@@ -70,7 +73,6 @@ end
 #   config.hook_into :webmock
 #   config.filter_sensitive_data("<encrypted_key>") { ENV["mapquest_api_key"] }
 #   config.filter_sensitive_data("<encrypted_key>") { ENV["open_weather_api_key"] }
-#
 #   config.configure_rspec_metadata!
 # end
 

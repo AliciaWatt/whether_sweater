@@ -14,4 +14,20 @@ RSpec.describe "MapQuest Facade" do
       end
     end
   end
+  describe "get_road_trip" do
+    context "good request", :vcr do
+      let!(:origin) { "New York, NY" }
+      let!(:destination) { "Los Angeles, CA" }
+      let!(:roadtrip) { MapQuestFacade.get_road_trip(origin, destination) }
+
+      it "returns expected data" do
+        expect(roadtrip).to be_a(RoadTrip)
+        expect(roadtrip.start_city).to eq("New York, NY")
+        expect(roadtrip.end_city).to eq("Los Angeles, CA")
+        expect(roadtrip.travel_time).to eq("40 hours, 16 minutes")
+        expect(roadtrip.weather[:temperature]).to be_a(String)
+        expect(roadtrip.weather[:conditions]).to be_a(String)
+      end
+    end
+  end
 end

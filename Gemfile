@@ -15,7 +15,7 @@ gem "jsonapi-serializer"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem "bcrypt", "~> 3.1.7"
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -26,7 +26,7 @@ gem "jsonapi-serializer"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 gem "faraday"
-gem "unsplash"
+
 gem "pexels"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
@@ -43,7 +43,7 @@ group :development, :test do
   gem "simplecov"
 
   # gem "webmock"
-  # gem "faker"
+  gem "faker"
   gem "rspec_junit_formatter"
   gem "standardrb"
 end
@@ -56,9 +56,9 @@ group :development do
 end
 
 group :test do
+  gem "capybara"
   gem "webmock"
   gem "vcr"
-  gem "faker"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
