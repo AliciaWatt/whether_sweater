@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get "/backgrounds", to: "image#search"
       get "/book-search", to: "book#search"
       post "/users", to: "users#register"
+      post "/sessions", to: "users#register"
     end
   end
 end
