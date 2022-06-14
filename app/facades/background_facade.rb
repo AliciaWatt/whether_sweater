@@ -1,4 +1,4 @@
-class PexelsFacade
+class BackgroundFacade
   class << self
     def search(query)
       response = PexelsService.search(query)

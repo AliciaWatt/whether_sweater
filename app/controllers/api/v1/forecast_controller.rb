@@ -1,7 +1,5 @@
 class Api::V1::ForecastController < ApplicationController
   def search
-    require "pry"
-    binding.pry
     latLon = MapQuestFacade.get_geocode("#{params[:city]}, #{params[:state]}")
     lat = latLon[:lat]
     lon = latLon[:lng]
