@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "POST /api/v1/users" do
-  context "good credentials" do
+  context "credentials" do
     describe "register a new user", :vcr do
       let!(:request_data) {
         {email: "whatever@example.com",

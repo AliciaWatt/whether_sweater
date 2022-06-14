@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   def register
-    json = JSON.parse(request.body.string, symbolize_names: true)
+    json = request_json
     new_api_key = Faker::Alphanumeric.alphanumeric(number: 27)
     user = User.create(email: json[:email], password: json[:password], password_confirmation: json[:password_confirmation], api_key: new_api_key)
 
@@ -15,6 +15,7 @@ class Api::V1::UsersController < ApplicationController
     json = request_json
     user = User.find_by(email: json[:email])
     if user && user.authenticate(json[:password])
+
       json_response(UsersSerializer.new(user), :ok)
     else
       json_response({data: {message: "Invalid credentials"}}, :unauthorized)
