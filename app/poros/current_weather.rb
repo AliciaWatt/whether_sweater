@@ -19,9 +19,9 @@ class CurrentWeather
     @humidity = (data[:humidity]).to_f
     @uvi = (data[:uvi]).to_f
     @visibility = (data[:visibility]).to_f
-    @conditions = data[:weather][0][:description]
-    # @conditions = data[:conditions]
-    @icon = data[:weather][0][:icon]
-    # @icon = data[:icon]
+
+    @conditions = data[:conditions]
+
+    @icon = data[:icon]
   end
 end
