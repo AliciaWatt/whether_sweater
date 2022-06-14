@@ -106,7 +106,7 @@ $ rails s
 #### Retrieve Background Image for the City: `GET /api/v1/backgrounds?location=denver,co`
 #### Example Response:
 
-```
+
 {
     "data": {
         "id": null,
@@ -122,7 +122,7 @@ $ rails s
         }
     }
 }
-```
+
 
 #### User Registration: `POST /api/v1/users`
 ```
