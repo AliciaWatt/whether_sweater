@@ -24,9 +24,9 @@ RSpec.describe "MapQuest Facade" do
         expect(roadtrip).to be_a(RoadTrip)
         expect(roadtrip.start_city).to eq("New York, NY")
         expect(roadtrip.end_city).to eq("Los Angeles, CA")
-        expect(roadtrip.travel_time).to eq("11 hours, 46 minutes")
-        expect(roadtrip.temperature).to be_a(String)
-        expect(roadtrip.conditions).to be_a(String)
+        expect(roadtrip.travel_time).to eq("40 hours, 16 minutes")
+        expect(roadtrip.weather[:temperature]).to be_a(String)
+        expect(roadtrip.weather[:conditions]).to be_a(String)
       end
     end
   end
