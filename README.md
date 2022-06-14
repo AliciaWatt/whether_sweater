@@ -55,6 +55,7 @@ $ rails s
    - Please visit below endpoints to see JSON data being exposed
    ## Testing
     - Test using the terminal utilizing RSpec
+
     ```shell
     $ rspec spec/<follow directory path to test specific files>
     ```
@@ -91,43 +92,7 @@ $ rails s
                     "min_temp": "289.38 F",
                     "conditions": "scattered clouds",
                     "icon": "03d"
-                },
-                {
-                    "date": "2022-06-15",
-                    "sunrise": "2022-06-15 05:31:27 -06:00",
-                    "sunset": "2022-06-15 20:29:34 -06:00",
-                    "max_temp": "304.08 F",
-                    "min_temp": "287.14 F",
-                    "conditions": "clear sky",
-                    "icon": "01d"
-                },
-                {
-                    "date": "2022-06-16",
-                    "sunrise": "2022-06-16 05:31:29 -06:00",
-                    "sunset": "2022-06-16 20:29:55 -06:00",
-                    "max_temp": "307.84 F",
-                    "min_temp": "291.6 F",
-                    "conditions": "clear sky",
-                    "icon": "01d"
-                },
-                {
-                    "date": "2022-06-17",
-                    "sunrise": "2022-06-17 05:31:33 -06:00",
-                    "sunset": "2022-06-17 20:30:15 -06:00",
-                    "max_temp": "308.78 F",
-                    "min_temp": "294.46 F",
-                    "conditions": "clear sky",
-                    "icon": "01d"
-                },
-                {
-                    "date": "2022-06-18",
-                    "sunrise": "2022-06-18 05:31:39 -06:00",
-                    "sunset": "2022-06-18 20:30:34 -06:00",
-                    "max_temp": "309.5 F",
-                    "min_temp": "295.16 F",
-                    "conditions": "scattered clouds",
-                    "icon": "03d"
-                }
+                }{etc..}
             ],
             "hourly_weather": [
                 {
@@ -135,53 +100,7 @@ $ rails s
                     "temperature": "301.69 F",
                     "conditions": "scattered clouds",
                     "icon": "03d"
-                },
-                {
-                    "time": "17:00:00",
-                    "temperature": "301.78 F",
-                    "conditions": "scattered clouds",
-                    "icon": "03d"
-                },
-                {
-                    "time": "18:00:00",
-                    "temperature": "301.83 F",
-                    "conditions": "few clouds",
-                    "icon": "02d"
-                },
-                {
-                    "time": "19:00:00",
-                    "temperature": "301.36 F",
-                    "conditions": "few clouds",
-                    "icon": "02d"
-                },
-                {
-                    "time": "20:00:00",
-                    "temperature": "299.58 F",
-                    "conditions": "few clouds",
-                    "icon": "02d"
-                },
-                {
-                    "time": "21:00:00",
-                    "temperature": "295.68 F",
-                    "conditions": "clear sky",
-                    "icon": "01n"
-                },
-                {
-                    "time": "22:00:00",
-                    "temperature": "293.22 F",
-                    "conditions": "clear sky",
-                    "icon": "01n"
-                },
-                {
-                    "time": "23:00:00",
-                    "temperature": "291.25 F",
-                    "conditions": "clear sky",
-                    "icon": "01n"
-                }
-            ]
-        }
-    }
-}
+                } {etc ...}
 ```
 
 #### Retrieve Background Image for the City: `GET /api/v1/backgrounds?location=denver,co`
